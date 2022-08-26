@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./home.scss";
 import NavBar from "../../components/NavBar/NavBar";
+import Footer from "../../components/Footer/Footer";
 import CountryList from "../../components/CountryList/Countrylist";
 import { gql, useQuery } from "@apollo/client";
 import CircularProgress from "@mui/material/CircularProgress";
@@ -42,6 +43,7 @@ const Home = () => {
       ) : (
         <CountryList data={data} />
       )}
+      <Footer />
     </div>
   );
 };
