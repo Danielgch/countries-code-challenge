@@ -4,7 +4,10 @@
 This is a applicacion that get info of countries with the API  https://countries.trevorblades.com/
 We can view each country, and paginate the main page, i try made the query for continent and currency, but only works by Code, i would like get feed back of how to use some parameters in the graphql query. 
 
-### `npm start`
+### 1 step . step `npm i`
+I ignore the nodmodules and package-lock.json, you need run `npm install`
+
+### 2 step. `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
