@@ -171,7 +171,7 @@ const Countrylist = (data: any) => {
             </div>
             {/* country lists */}
             <div className="country-list__cards">
-                {paginatedCountries.map((country: any) => (
+                {paginatedCountries?.map((country: any) => (
                     <CountryCard country={country} key={country.code} />
                 ))}
             </div>
