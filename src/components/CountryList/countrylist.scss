@@ -1,4 +1,4 @@
-@import '../../styles/_base.scss';
+@import "../../styles/_base.scss";
 
 .country-list {
     max-width: $max-width;
@@ -15,13 +15,14 @@
             margin-right: 2rem;
             font-weight: weight(medium);
         }
-        #sort-country{
-            color: $primary!important;
-            font-weight: weight(medium);
 
+        #sort-country {
+            color: $primary  !important;
+            font-weight: weight(medium);
         }
-        svg{
-            color:$primary;
+
+        svg {
+            color: $primary;
             font-weight: weight(medium);
         }
     }

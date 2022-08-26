@@ -1,31 +1,32 @@
 @import "../../styles/_base.scss";
 
 .country-card {
-    box-shadow: $box-shadow;
-    max-width: 300px;
+  box-shadow: $box-shadow;
+  max-width: 300px;
 
-    &__wrapper {
-        padding: 5rem;
+  &__wrapper {
+    padding: 5rem;
 
-        .emoji {
-            max-width: 250px;
-            font-size: 180px;
+    .emoji {
+      max-width: 250px;
+      font-size: 180px;
 
-            max-height: 150px;
-        }
+      max-height: 150px;
     }
+  }
 
-    &__name {
-        margin-top: 5rem;
-        color: $black;
-    }
+  &__name {
+    margin-top: 5rem;
+    color: $black;
+  }
 
-    &__continent {
-        margin-top: 2.5rem;
-        color: $blackLight;
-        margin-bottom: 6.5rem;
-    }
-    &__action{
-        width: 100%;
-    }
+  &__continent {
+    margin-top: 2.5rem;
+    color: $blackLight;
+    margin-bottom: 6.5rem;
+  }
+
+  &__action {
+    width: 100%;
+  }
 }

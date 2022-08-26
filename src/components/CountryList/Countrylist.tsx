@@ -1,41 +1,43 @@
-import React, { useState, useEffect } from 'react'
-import { Select, MenuItem } from '@material-ui/core';
-import CountryCard from '../CountryCard/CountryCard';
+import React, { useState, useEffect } from "react";
+import { Select, MenuItem } from "@material-ui/core";
+import CountryCard from "../CountryCard/CountryCard";
 import _ from "lodash";
-import './countrylist.scss'
+import "./countrylist.scss";
 
-
+/**
+ * Country List Component
+ * @param {data} param0 Data of countries to list
+ * @returns the templeathe with countries cards
+ */
 
 const Countrylist = (data: any) => {
     // sorted by asc default
-    const [sortBy, setSortBy] = useState(Boolean('asc'));
-
-
+    const [sortBy, setSortBy] = useState(Boolean("asc"));
     const [filteredCountries, setFilteredCountries] = useState([]);
     const { data: dataToSort } = data;
     const { countries } = dataToSort;
 
-
-
     useEffect(() => {
-        const sortedData = _.orderBy(countries, ['name'], [sortBy]) as [];
+        const sortedData = _.orderBy(countries, ["name"], [sortBy]) as [];
         setFilteredCountries(sortedData);
-    }, [sortBy, countries])
+    }, [sortBy, countries]);
 
     const handleSorting = (e: any) => {
         setSortBy(e.target.value);
-    }
+    };
 
     return (
         <div className="home__countries">
             {/* sorting */}
             <div className="country-list__sort">
                 <p>Sorting</p>
-                <Select labelId="sort-country-select-label"
+                <Select
+                    labelId="sort-country-select-label"
                     id="sort-country"
                     disableUnderline={true}
                     defaultValue="asc"
-                    onChange={handleSorting}>
+                    onChange={handleSorting}
+                >
                     <MenuItem value="asc">Asc</MenuItem>
                     <MenuItem value="desc">Desc</MenuItem>
                 </Select>
@@ -46,9 +48,8 @@ const Countrylist = (data: any) => {
                     <CountryCard country={country} key={country.code} />
                 ))}
             </div>
-           
         </div>
-    )
-}
+    );
+};
 
 export default Countrylist;
