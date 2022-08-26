@@ -32,4 +32,22 @@
         justify-content: space-evenly;
         flex-wrap: wrap;
     }
+
+    &__pagination {
+        display: flex;
+        justify-content: flex-start;
+        padding-bottom: 5rem;
+        padding-top: 2rem;
+
+
+        button.MuiButtonBase-root.MuiIconButton-root.Mui-disabled.Mui-disabled {
+            background: transparent !important;
+        }
+
+        .MuiTableCell-root {
+
+            border-bottom: none !important;
+
+        }
+    }
 }
