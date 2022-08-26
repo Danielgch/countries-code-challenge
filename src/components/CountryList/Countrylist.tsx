@@ -109,6 +109,7 @@ function TablePaginationActions(props: TablePaginationActionsProps) {
  */
 
 const Countrylist = (data: any) => {
+
     // sorted by asc default
     const [sortBy, setSortBy] = useState(Boolean("asc"));
     const [filteredCountries, setFilteredCountries] = useState([]);
@@ -118,7 +119,7 @@ const Countrylist = (data: any) => {
     //pagination related
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(5);
-    const [paginatedCountries, setPaginatedCountries] = React.useState(countries);
+    const [paginatedCountries, setPaginatedCountries] = useState(countries);
 
 
     const handleChangePage = (

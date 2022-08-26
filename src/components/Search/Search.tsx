@@ -1,4 +1,4 @@
-import React from "react";
+import Reac from "react";
 import Input from "@material-ui/core/Input";
 import SearchIcon from "@mui/icons-material/Search";
 import "./search.scss";
@@ -9,12 +9,14 @@ import "./search.scss";
  * @param {} param0
  * @returns The search return by Currency and continent
  */
+const Search = ({ ...props }) => {
+    const { handleChange, search } = props;
 
-const Search = () => {
     return (
         <div className="search-box">
             <div className="search-box__wrapper">
-                <Input placeholder="Search" disableUnderline={true} />
+                <Input placeholder="Search" value={search}
+                    onChange={handleChange} disableUnderline={true} />
                 <SearchIcon />
             </div>
         </div>

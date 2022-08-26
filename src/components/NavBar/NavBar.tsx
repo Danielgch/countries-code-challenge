@@ -9,8 +9,10 @@ import "./navbar.scss";
  * Component  where is located the logo, and search functionality
  * @returns jsx whith navbar
  */
+const NavBar = ({  ...props }) => {
+    const { handleChange, search } = props;
 
-const NavBar = () => {
+
     return (
         <div className="navbar">
             <div className="navbar__content container">
@@ -20,7 +22,7 @@ const NavBar = () => {
                 </div>
                 {/* Search */}
                 <div className="navbar__content-search">
-                    <Search />
+                    <Search handleChange={handleChange} search={search} />
                 </div>
                 {/* right side items */}
                 <div className="navbar__content-right">

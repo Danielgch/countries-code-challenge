@@ -41,7 +41,7 @@ const SEARCH_COUNTRY = gql`
  */
 const Country = () => {
     const { code } = useParams() as any;
-    const [codeSearch, setCodeSearch] = useState("");
+    const [codeSearch, setCodeSearch] = useState();
     const { data, loading, error } = useQuery(SEARCH_COUNTRY, {
         client,
         variables: { codeSearch }
@@ -66,7 +66,7 @@ const Country = () => {
                     Go back
                 </Button>
             </div>
-            {loading || error ? (
+            {loading || error  || !data ? (
                 <div className="country-page__progress">
                     <CircularProgress />
                 </div>
@@ -76,7 +76,7 @@ const Country = () => {
                         <span
                             className="emoji"
                             role="img"
-                            aria-label={data.countries[0].name}
+                            
                         >
                             {data.countries[0].emoji}
                         </span>
