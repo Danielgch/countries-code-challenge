@@ -89,7 +89,7 @@ const Home = () => {
   return (
     <div className="home">
       <NavBar handleChange={handleChange} search={search} />
-      {loading || loadingSearch || error ? (
+      {loading || loadingSearch || error || errorSearch ? (
         <div className="home__progress">
           <CircularProgress />
         </div>

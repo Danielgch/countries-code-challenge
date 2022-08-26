@@ -1,4 +1,4 @@
-import Reac from "react";
+import React from "react";
 import Input from "@material-ui/core/Input";
 import SearchIcon from "@mui/icons-material/Search";
 import "./search.scss";
