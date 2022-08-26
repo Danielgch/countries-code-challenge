@@ -1,0 +1,27 @@
+@import "../../styles/_base.scss";
+
+.container-footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &__row {
+        font-size: 17px;
+        color: $blackLight;
+        line-height: 16px;
+        margin: 3px 0;
+        font-weight: weight(medium);
+    }
+
+    &__ul {
+        text-align: center;
+    }
+
+    &__firtsli {
+        padding: 0 24px 4px 0;
+        display: inline-block;
+    }
+
+    &__secondli {
+        padding-top: 5px;
+    }
+}
