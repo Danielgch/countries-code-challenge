@@ -1,0 +1,9 @@
+.home {
+    padding-top: 30px;
+
+    &__progress {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

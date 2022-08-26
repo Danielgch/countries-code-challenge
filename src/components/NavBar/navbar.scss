@@ -1,0 +1,40 @@
+@import "../../styles/_base.scss";
+
+.navbar {
+    height: 80px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__content-left {
+        max-width: 120px;
+        height: auto;
+        width: auto;
+        span{
+            font-size: 17px;
+        }
+    }
+
+    &__content-right {
+        display: flex;
+        align-items: center;
+
+        svg.MuiSvgIcon-root {
+            font-size: 40px;
+            color: $black;
+        }
+    }
+
+    &__content-other {
+        display: flex;
+        align-items: center;
+        margin-right: 5rem;
+    }
+}

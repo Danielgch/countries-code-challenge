@@ -1,0 +1,34 @@
+@import '../../styles/_base.scss';
+
+.country-list {
+    max-width: $max-width;
+    margin: 5rem auto 0 auto;
+
+    &__sort {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 3rem;
+
+        p {
+            margin-left: 2rem;
+            margin-right: 2rem;
+            font-weight: weight(medium);
+        }
+        #sort-country{
+            color: $primary!important;
+            font-weight: weight(medium);
+
+        }
+        svg{
+            color:$primary;
+            font-weight: weight(medium);
+        }
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+}
